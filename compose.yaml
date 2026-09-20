@@ -1,0 +1,19 @@
+services:
+  database:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: compatlab
+      POSTGRES_USER: compatlab
+      POSTGRES_PASSWORD: compatlab
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U compatlab -d compatlab"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - compatlab_data:/var/lib/postgresql/data
+
+volumes:
+  compatlab_data:
