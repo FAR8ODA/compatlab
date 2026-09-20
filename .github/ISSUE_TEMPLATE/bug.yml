@@ -1,0 +1,25 @@
+name: Bug report
+description: Report reproducible behavior that differs from the documented contract.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Describe what happened and include the smallest reproducible example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what should have happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include logs, screenshots, queries, or affected records with secrets removed.

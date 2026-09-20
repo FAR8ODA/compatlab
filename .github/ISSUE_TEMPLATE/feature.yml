@@ -1,0 +1,27 @@
+name: Engineering task
+description: Define a scoped product, database, or quality improvement.
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain the engineering problem before describing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intended outcome
+      description: State the observable behavior that will mark this task complete.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List the checks, constraints, or user flows that must pass.
+    validations:
+      required: true
